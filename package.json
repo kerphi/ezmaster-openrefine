@@ -1,0 +1,21 @@
+{
+  "name": "ezmaster-openrefine",
+  "version": "1.0.0",
+  "description": "[Ezmasterization](https://github.com/Inist-CNRS/ezmaster) of openrefine",
+  "scripts": {
+    "insertversion:readme": "sed -i \"s#\\(abesesr/ezmaster-openrefine:\\)\\([\\.a-z0-9]\\+\\)#\\1${npm_package_version}#g\" README.md",
+    "insertversion:makefile": "sed -i \"s#\\(abesesr/ezmaster-openrefine:\\)\\([\\.a-z0-9]\\+\\)#\\1${npm_package_version}#g\" Makefile",
+    "version": "npm run insertversion:readme && npm run insertversion:makefile && git add README.md Makefile",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abes-esr/ezmaster-openrefine.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/abes-esr/ezmaster-openrefine/issues"
+  },
+  "homepage": "https://github.com/abes-esr/ezmaster-openrefine#readme",
+  "dependencies": {}
+}
